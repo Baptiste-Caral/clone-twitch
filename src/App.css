@@ -1,20 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
   background: #f1f1f1;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #app {
   text-align: center;
 }
 
-/* HEADER */
+/* 
+///////////////////
+HEADER
+//////////////////
+*/
 
 .headerTop {
-  background: #6441a4;
+  background: #00C4CC;
   height: 50px;
   position: fixed;
   width: 100%;
@@ -28,6 +34,7 @@ body {
  }
 .navLinks {
   padding: 0 20px;
+  list-style-type: none;
 }
 .navLinks:nth-child(4) {
   margin: 0 auto;
@@ -70,7 +77,11 @@ body {
 .menuIco {
   width: 25px;
 }
-/* // SIDEBAR */
+/* 
+///////////////////
+SIDEBAR
+//////////////////
+*/
 
 .sidebar {
   position: fixed;
@@ -90,6 +101,102 @@ body {
   color: #efebf5;
   
 }
-/* GAMES */
 
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
 
+}
+/* 
+///////////////////
+GAMES
+//////////////////
+*/
+
+.titreGames {
+  padding-top: 90px;
+  font-size: 50px;
+  font-weight: 600;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
+.flexAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 260px;
+
+}
+.carteGames {
+  height: 480px;
+  width: 280;
+  margin: 0 30px 30px 0;
+  position: relative;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+  
+}
+.carteGames:hover {
+  transform: translateY(-5px);
+}
+.imgCarte {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cardBodyGames {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.btnCarte {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  background-color: #212529;
+  font-size: 14px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.btnCarte:hover {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.titreCartesGames {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media screen and (max-width: 1200px) {
+  .titreGames {
+padding-left: 0px;
+}
+  .flexAccueil {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titreGames {
+    font-size: 40px;
+    }
+}
+@media screen and (max-width: 559px) {
+  .carteGames {
+    margin: 0 0 30px 0;
+  }
+  .flexAccueil {
+    padding-left: 0px;
+  }
+}
